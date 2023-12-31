@@ -1395,8 +1395,8 @@ mysql_init = {
     'host': 'localhost',
     'port': 3306,
     'user': 'serveur',
-    'password': 'Mili482b',
-    'db': 'sae302_test',
+    'password': 'sae302',
+    'db': 'sae302',
 }
 
 
