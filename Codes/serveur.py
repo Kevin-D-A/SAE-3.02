@@ -1396,7 +1396,7 @@ mysql_init = {
     'port': 3306,
     'user': 'serveur',
     'password': 'sae302',
-    'db': 'sae302',
+    'db': 'sae_302',
 }
 
 
