@@ -570,9 +570,16 @@ class ServeurDeMessagerie:
                     sys.exit(0)
 
                 elif commande.startswith("/ban "):
-                    
-                    _, email_client = commande.split(" ", 1)
-                    self.ban_client(email_client, "Ban administratif.")
+
+                    try:
+
+                        _, email_client = commande.split(" ", 1)
+                        self.ban_client(email_client, "Ban administratif.")
+
+                    except Exception as erreur:
+
+                        print(f"Erreur : {erreur}")
+                        continue
 
                 elif commande.startswith("/unban "):
                     
@@ -586,9 +593,9 @@ class ServeurDeMessagerie:
                         self.kick_client(email_client, int(duree),
                                          "Kick administratif.")
 
-                    except ValueError:
+                    except Exception as erreur:
 
-                        print("\nProblème de syntaxe.")
+                        print(f"Erreur : {erreur}")
                         continue
 
                 elif commande.startswith("/unkick "):
